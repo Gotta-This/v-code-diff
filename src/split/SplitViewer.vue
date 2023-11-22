@@ -10,8 +10,8 @@ function expandHandler({ hideIndex }: SplitLineChange) {
   if (hideIndex === undefined)
     return
   props.diffChange.collector[hideIndex!].lines.forEach((line) => {
-    line.hide = false
-    line.fold = false
+    line.hide = !line.hide
+    line.fold = !line.fold
   })
 }
 </script>

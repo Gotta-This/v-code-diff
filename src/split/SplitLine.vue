@@ -55,6 +55,7 @@ function onSplitLineMousedown(side: 'left' | 'right') {
             'blob-num-context': line.type === DiffType.EQUAL,
             'blob-num-hunk': splitLine.hide !== undefined,
           }"
+          @click="splitLine.hideIndex !== undefined?emit('expand', splitLine):undefined"
         >
           {{ line.num }}
         </td>
